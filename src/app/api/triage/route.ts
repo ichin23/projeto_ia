@@ -20,26 +20,34 @@ export async function POST(req: Request) {
     }
 
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
-    
+
     const prompt = `
-Você é um agente especialista em triagem de chamados. Sua tarefa é classificar a solicitação do usuário em APENAS UM dos seguintes setores: 'TI', 'RH', 'Financeiro', 'Marketing' ou 'Desconhecido'.
-Não explique o motivo, responda APENAS com o nome exato do setor.
+      Você é um agente especialista em triagem de chamados corporativos. 
+      Sua tarefa é classificar a solicitação do usuário em APENAS UM dos seguintes setores: 'TI', 'RH', 'Financeiro', 'Marketing' ou 'Desconhecido'.
+      
+      Diretrizes de Classificação:
+      - 'TI': Problemas técnicos em equipamentos (computadores, impressoras), falhas em sistemas/softwares internos, problemas de rede/internet, ou solicitação de acessos.
+      - 'Marketing': Campanhas publicitárias, redes sociais (Instagram, Facebook), criação de conteúdo, eventos externos, branding e comunicação externa.
+      - 'RH': Folha de pagamento, férias, benefícios, recrutamento, treinamentos corporativos.
+      - 'Financeiro': Pagamentos, reembolsos, faturamento, notas fiscais, orçamentos.
+      
+      Não explique o motivo, responda APENAS com o nome exato do setor.
 
-Contexto da solicitação:
-${context || 'Nenhum contexto adicional'}
+      Contexto da solicitação:
+      ${context || 'Nenhum contexto adicional'}
 
-Solicitação do usuário:
-${text}
+      Solicitação do usuário:
+      ${text}
 
-Setor:
-`;
+      Setor:
+    `;
 
     const result = await model.generateContent(prompt);
     const responseText = result.response.text().trim();
-    
+
     const validSectors = ['TI', 'RH', 'Financeiro', 'Marketing'];
     let finalSector = 'Desconhecido';
-    
+
     for (const sector of validSectors) {
       if (responseText.toUpperCase().includes(sector.toUpperCase())) {
         finalSector = sector;
