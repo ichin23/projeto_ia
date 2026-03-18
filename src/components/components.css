@@ -1,0 +1,144 @@
+/* src/components/components.css */
+
+.question-card {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.question-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.card-sector-ti::after { background-color: var(--sector-ti); }
+.card-sector-rh::after { background-color: var(--sector-rh); }
+.card-sector-financeiro::after { background-color: var(--sector-financeiro); }
+.card-sector-marketing::after { background-color: var(--sector-marketing); }
+.card-sector-desconhecido::after { background-color: var(--sector-unknown); }
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.card-id {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.card-context {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sector-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sector-ti { background: rgba(59, 130, 246, 0.15); color: var(--sector-ti); border: 1px solid rgba(59, 130, 246, 0.3); }
+.sector-rh { background: rgba(236, 72, 153, 0.15); color: var(--sector-rh); border: 1px solid rgba(236, 72, 153, 0.3); }
+.sector-financeiro { background: rgba(16, 185, 129, 0.15); color: var(--sector-financeiro); border: 1px solid rgba(16, 185, 129, 0.3); }
+.sector-marketing { background: rgba(245, 158, 11, 0.15); color: var(--sector-marketing); border: 1px solid rgba(245, 158, 11, 0.3); }
+.sector-desconhecido { background: rgba(100, 116, 139, 0.15); color: var(--sector-unknown); border: 1px solid rgba(100, 116, 139, 0.3); }
+
+/* Sector Board styles */
+.sector-board {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 500px;
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.sector-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sector-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.title-ti { color: var(--sector-ti); }
+.title-rh { color: var(--sector-rh); }
+.title-financeiro { color: var(--sector-financeiro); }
+.title-marketing { color: var(--sector-marketing); }
+.title-desconhecido { color: var(--text-secondary); }
+
+.sector-count {
+  background: var(--bg-primary);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+}
+
+.sector-content {
+  padding: 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-align: center;
+  opacity: 0.6;
+  border: 1px dashed var(--glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  min-height: 200px;
+}
