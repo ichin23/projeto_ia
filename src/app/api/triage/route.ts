@@ -48,12 +48,11 @@ export async function POST(req: Request) {
     const validSectors = ['TI', 'RH', 'Financeiro', 'Marketing'];
     let finalSector = 'Desconhecido';
 
-    for (const sector of validSectors) {
-      if (responseText.toUpperCase().includes(sector.toUpperCase())) {
-        finalSector = sector;
-        break;
+    finalSector = "Desconhecido";
+
+    if (validSectors.includes(responseText)) {
+        finalSector = responseText;
       }
-    }
 
     return NextResponse.json({ sector: finalSector });
 
