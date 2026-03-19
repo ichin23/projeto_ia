@@ -74,7 +74,7 @@
   letter-spacing: 0.5px;
 }
 
-.sector-ti { background: rgba(59, 130, 246, 0.15); color: var(--sector-ti); border: 1px solid rgba(59, 130, 246, 0.3); }
+.sector-ti { background: rgba(20, 184, 166, 0.15); color: var(--sector-ti); border: 1px solid rgba(20, 184, 166, 0.3); }
 .sector-rh { background: rgba(236, 72, 153, 0.15); color: var(--sector-rh); border: 1px solid rgba(236, 72, 153, 0.3); }
 .sector-financeiro { background: rgba(16, 185, 129, 0.15); color: var(--sector-financeiro); border: 1px solid rgba(16, 185, 129, 0.3); }
 .sector-marketing { background: rgba(245, 158, 11, 0.15); color: var(--sector-marketing); border: 1px solid rgba(245, 158, 11, 0.3); }
