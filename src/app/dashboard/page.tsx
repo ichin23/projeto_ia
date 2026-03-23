@@ -6,12 +6,9 @@ import SectorBoard from '../../components/SectorBoard';
 import './dashboard.css';
 
 export default function Dashboard() {
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [questions, setQuestions] = useState<Question[]>(() => getQuestions());
 
   useEffect(() => {
-    // Load from local storage
-    setQuestions(getQuestions());
-    
     // Optional: add interval to poll if multiple tabs are open
     const interval = setInterval(() => {
       setQuestions(getQuestions());
@@ -20,7 +17,15 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, []);
 
-  const sectors: Sector[] = ['TI', 'RH', 'Financeiro', 'Marketing'];
+  const sectors: Sector[] = [
+    'TI',
+    'RH',
+    'Financeiro',
+    'Marketing',
+    'Comercial',
+    'Operacoes',
+    'Juridico',
+  ];
 
   return (
     <div className="dashboard-container animate-fade-in">

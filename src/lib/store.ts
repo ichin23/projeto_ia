@@ -1,4 +1,12 @@
-export type Sector = 'TI' | 'RH' | 'Financeiro' | 'Marketing' | 'Desconhecido';
+export type Sector =
+  | 'TI'
+  | 'RH'
+  | 'Financeiro'
+  | 'Marketing'
+  | 'Comercial'
+  | 'Operacoes'
+  | 'Juridico'
+  | 'Desconhecido';
 
 export interface Question {
   id: string;

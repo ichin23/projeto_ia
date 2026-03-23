@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { analyzeQuestion, addQuestion, Sector, Question } from '../lib/store';
+import { analyzeQuestion, addQuestion, Question } from '../lib/store';
 import QuestionCard from '../components/QuestionCard';
 import './home.css';
 
@@ -42,7 +42,7 @@ export default function Home() {
         </h1>
         <p className="hero-subtitle">
           Descreva sua dúvida detalhadamente. Nosso agente irá analisar o contexto
-          e direcionar automaticamente para o setor correto (TI, RH, Marketing, Financeiro).
+          e direcionar automaticamente para o setor correto (TI, RH, Marketing, Financeiro, Comercial, Operacoes ou Juridico).
         </p>
       </div>
 

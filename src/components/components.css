@@ -25,6 +25,9 @@
 .card-sector-rh::after { background-color: var(--sector-rh); }
 .card-sector-financeiro::after { background-color: var(--sector-financeiro); }
 .card-sector-marketing::after { background-color: var(--sector-marketing); }
+.card-sector-comercial::after { background-color: var(--sector-comercial); }
+.card-sector-operacoes::after { background-color: var(--sector-operacoes); }
+.card-sector-juridico::after { background-color: var(--sector-juridico); }
 .card-sector-desconhecido::after { background-color: var(--sector-unknown); }
 
 .card-header {
@@ -78,6 +81,9 @@
 .sector-rh { background: rgba(236, 72, 153, 0.15); color: var(--sector-rh); border: 1px solid rgba(236, 72, 153, 0.3); }
 .sector-financeiro { background: rgba(16, 185, 129, 0.15); color: var(--sector-financeiro); border: 1px solid rgba(16, 185, 129, 0.3); }
 .sector-marketing { background: rgba(245, 158, 11, 0.15); color: var(--sector-marketing); border: 1px solid rgba(245, 158, 11, 0.3); }
+.sector-comercial { background: rgba(59, 130, 246, 0.15); color: var(--sector-comercial); border: 1px solid rgba(59, 130, 246, 0.3); }
+.sector-operacoes { background: rgba(139, 92, 246, 0.15); color: var(--sector-operacoes); border: 1px solid rgba(139, 92, 246, 0.3); }
+.sector-juridico { background: rgba(249, 115, 22, 0.15); color: var(--sector-juridico); border: 1px solid rgba(249, 115, 22, 0.3); }
 .sector-desconhecido { background: rgba(100, 116, 139, 0.15); color: var(--sector-unknown); border: 1px solid rgba(100, 116, 139, 0.3); }
 
 /* Sector Board styles */
@@ -108,6 +114,9 @@
 .title-rh { color: var(--sector-rh); }
 .title-financeiro { color: var(--sector-financeiro); }
 .title-marketing { color: var(--sector-marketing); }
+.title-comercial { color: var(--sector-comercial); }
+.title-operacoes { color: var(--sector-operacoes); }
+.title-juridico { color: var(--sector-juridico); }
 .title-desconhecido { color: var(--text-secondary); }
 
 .sector-count {
